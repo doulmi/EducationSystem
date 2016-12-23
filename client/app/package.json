@@ -1,8 +1,8 @@
 {
-  "name": "education-system",
-  "productName": "海空飞行员成长记录系统",
+  "name": "alphabeille",
+  "productName": "Alphabeille",
   "version": "1.0.0",
-  "description": "A manage system for students and teachers",
+  "description": "A video player to share and translate french videos",
   "main": "./main.js",
   "author": {
     "name": "CHEN Fengyu",

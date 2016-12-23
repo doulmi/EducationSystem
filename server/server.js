@@ -6,7 +6,7 @@ import mongoose from 'mongoose'
 import log4js from 'log4js'
 
 import authenticate from './middlewares/authenticate'
-import { DB_NAME } from './config';
+// import { DB_NAME } from './config';
 
 const PORT = process.env.PORT || 3333;
 
@@ -34,7 +34,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-mongoose.connect('mongodb://' + DB_NAME);
+mongoose.connect('mongodb://localhost:27017');
 mongoose.set('debug', true);
 
 

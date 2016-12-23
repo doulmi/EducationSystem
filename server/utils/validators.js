@@ -5,8 +5,8 @@ export const validLoginData = (data) => {
   let errors = {};
 
   validator.isEmpty('');
-  if (validator.isEmpty(data.userId)) {
-    errors.userId = '账号是必填项';
+  if (validator.isEmail(data.email)) {
+    errors.email = '账号是必填项';
   }
 
   if (validator.isEmpty(data.password)) {

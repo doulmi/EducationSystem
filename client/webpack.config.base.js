@@ -10,14 +10,11 @@ import {
 
 export default validate({
   module: {
-    loaders: [{
-      test: /\.jsx?$/,
-      loaders: ['babel-loader'],
-      exclude: /node_modules/
-    }, {
-      test: /\.json$/,
-      loader: 'json-loader'
-    }]
+    loaders: [
+      { test: /\.jsx?$/, loaders: ['babel-loader'], exclude: /node_modules/ },
+      { test: /\.json$/, loader: 'json-loader' },
+      { test: /\.global.scss$/, loaders: ["style-loader", "css-loader?sourceMa", "sass-loader"] },
+    ]
   },
 
   output: {

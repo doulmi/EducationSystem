@@ -1,14 +1,38 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
+import Fox from '../../components/Fox'
+import N18 from '../../constants/strings'
+import '../../styles/Page404.scss'
+
+const getStyles = (theme) => {
+  return {
+    top: {
+      marginTop: 300
+    },
+
+    text: {
+      position: 'absolute',
+      textAlign: 'center',
+      width: '100%',
+      marginTop: 150,
+      fontSize: 20,
+      color: theme.palette.secondaryTextColor,
+    }
+  }
+}
 
 class Page404 extends Component {
-  constructor(props) {
-    super(props);
-    
+  static contextTypes = {
+    muiTheme: PropTypes.object.isRequired
   }
 
   render() {
-    return(
-      <div>Page404</div>
+    let styles = getStyles(this.context.muiTheme)
+
+    return (
+      <div style={styles.top}>
+        <Fox /><br />
+        <span style={styles.text}>{N18.page404}</span>
+      </div>
     )
   }
 }
